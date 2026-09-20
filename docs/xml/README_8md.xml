@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>KIT_PSC3M8_CC1<sp/>BSP</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Overview</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>PSOC™<sp/>Control<sp/>C3M8<sp/>Digital<sp/>Power<sp/>Control<sp/>Card<sp/>(KIT_PSC3M8_CC1)<sp/>is<sp/>based<sp/>on<sp/>the<sp/>Infineon<sp/>PSOC™<sp/>Control<sp/>C3M8<sp/>microcontroller<sp/>and<sp/>features<sp/>an<sp/>onboard<sp/>debugger<sp/>along<sp/>with<sp/>a<sp/>120-pin<sp/>edge<sp/>connector<sp/>for<sp/>seamless<sp/>integration<sp/>with<sp/>compatible<sp/>power<sp/>boards.<sp/>Powered<sp/>by<sp/>an<sp/>Arm®<sp/>Cortex®-M33<sp/>based<sp/>PSOC™<sp/>Control<sp/>MCU,<sp/>the<sp/>card<sp/>is<sp/>designed<sp/>to<sp/>evaluate,<sp/>develop,<sp/>and<sp/>demonstrate<sp/>advanced<sp/>digital<sp/>power<sp/>control<sp/>applications.<sp/>When<sp/>paired<sp/>with<sp/>supported<sp/>power<sp/>boards,<sp/>it<sp/>showcases<sp/>the<sp/>capabilities<sp/>of<sp/>the<sp/>PSOC™<sp/>Control<sp/>C3M8<sp/>device<sp/>for<sp/>power<sp/>conversion,<sp/>motor<sp/>control,<sp/>and<sp/>other<sp/>real-time<sp/>power<sp/>stage<sp/>control<sp/>applications.<sp/>The<sp/>card<sp/>plugs<sp/>into<sp/>a<sp/>standard<sp/>120-pin<sp/>edge<sp/>connector,<sp/>providing<sp/>a<sp/>flexible<sp/>platform<sp/>for<sp/>rapid<sp/>prototyping,<sp/>system<sp/>evaluation,<sp/>and<sp/>application<sp/>development<sp/>using<sp/>the<sp/>PSOC™<sp/>Control<sp/>C3M8<sp/>MCU.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note:**<sp/>Programming<sp/>this<sp/>kit<sp/>requires<sp/>installing<sp/>[SEGGER<sp/>J-Link<sp/>software](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![](board.png)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>use<sp/>code<sp/>from<sp/>the<sp/>BSP,<sp/>simply<sp/>include<sp/>a<sp/>reference<sp/>to<sp/>`cybsp.h`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Kit<sp/>Features:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>PSOC™<sp/>Control<sp/>C3M8<sp/>(Arm®<sp/>Cortex®-M33<sp/>based)<sp/>Microcontroller</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>120-pin<sp/>edge<sp/>connector<sp/>exposing<sp/>all<sp/>PSOC™<sp/>Control<sp/>C3M8<sp/>IOs</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>On-board<sp/>XMC4200<sp/>debug<sp/>probe<sp/>(J-Link)<sp/>with<sp/>isolated<sp/>USB<sp/>Type-C<sp/>interface<sp/>supporting<sp/>SWD</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Isolated<sp/>UART<sp/>virtual<sp/>COM<sp/>port<sp/>and<sp/>isolated<sp/>CAN<sp/>FD<sp/>transceiver<sp/>interface</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Isolated<sp/>5<sp/>V<sp/>power<sp/>supply<sp/>with<sp/>5<sp/>V-to-3.3<sp/>V<sp/>LDOs</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>One<sp/>status<sp/>LED,<sp/>a<sp/>reset<sp/>button,<sp/>and<sp/>an<sp/>I2C<sp/>header</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Kit<sp/>Contents:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>PSOC™<sp/>Control<sp/>C3P8<sp/>Digital<sp/>Power<sp/>Control<sp/>Card</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>PSOC™<sp/>Control<sp/>C3P8<sp/>Interface<sp/>Board</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Type<sp/>C<sp/>to<sp/>USB<sp/>A<sp/>cable</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>BSP<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>BSP<sp/>has<sp/>a<sp/>few<sp/>hooks<sp/>that<sp/>allow<sp/>its<sp/>behavior<sp/>to<sp/>be<sp/>configured.<sp/>Some<sp/>of<sp/>these<sp/>items<sp/>are<sp/>enabled<sp/>by<sp/>default<sp/>while<sp/>others<sp/>must<sp/>be<sp/>explicitly<sp/>enabled.<sp/>Items<sp/>enabled<sp/>by<sp/>default<sp/>are<sp/>specified<sp/>in<sp/>the<sp/>KIT_PSC3M8_CC1.mk<sp/>file.<sp/>The<sp/>items<sp/>that<sp/>are<sp/>enabled<sp/>can<sp/>be<sp/>changed<sp/>by<sp/>creating<sp/>a<sp/>custom<sp/>BSP<sp/>or<sp/>by<sp/>editing<sp/>the<sp/>application<sp/>makefile.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Clock<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>Clock<sp/><sp/>|<sp/><sp/><sp/>Source<sp/><sp/>|<sp/>Output<sp/>Frequency<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>:-----:<sp/>|<sp/>:-------:<sp/>|<sp/>:--------------:<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/><sp/>FLL<sp/><sp/><sp/>|<sp/><sp/><sp/><sp/>IHO<sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/>100.0<sp/>MHz<sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF0<sp/>|<sp/>CLK_PATH1<sp/>|<sp/><sp/><sp/><sp/><sp/>180<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF1<sp/>|<sp/>CLK_PATH1<sp/>|<sp/><sp/><sp/><sp/><sp/>180<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF2<sp/>|<sp/>CLK_PATH1<sp/>|<sp/><sp/><sp/><sp/><sp/>180<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF3<sp/>|<sp/>CLK_PATH2<sp/>|<sp/><sp/><sp/><sp/><sp/>200<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>CLK_HF4<sp/>|<sp/>CLK_PATH2<sp/>|<sp/><sp/><sp/><sp/><sp/>200<sp/>MHz<sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Power<sp/>Configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>System<sp/>Active<sp/>Power<sp/>Mode:<sp/>OD</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>System<sp/>Idle<sp/>Power<sp/>Mode:<sp/>Deep<sp/>Sleep</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>VDDA<sp/>Voltage:<sp/>3300<sp/>mV</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>VDDD<sp/>Voltage:<sp/>3300<sp/>mV</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">See<sp/>the<sp/>[BSP<sp/>Setttings][settings]<sp/>for<sp/>additional<sp/>board<sp/>specific<sp/>configuration<sp/>settings.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>API<sp/>Reference<sp/>Manual</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>KIT_PSC3M8_CC1<sp/>Board<sp/>Support<sp/>Package<sp/>provides<sp/>a<sp/>set<sp/>of<sp/>APIs<sp/>to<sp/>configure,<sp/>initialize<sp/>and<sp/>use<sp/>the<sp/>board<sp/>resources.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">See<sp/>the<sp/>[BSP<sp/>API<sp/>Reference<sp/>Manual][api]<sp/>for<sp/>the<sp/>complete<sp/>list<sp/>of<sp/>the<sp/>provided<sp/>interfaces.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>More<sp/>information</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[KIT_PSC3M8_CC1<sp/>BSP<sp/>API<sp/>Reference<sp/>Manual][api]</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[KIT_PSC3M8_CC1<sp/>Documentation](https://www.infineon.com/evaluation-board/KIT-PSC3M8-CC1)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Infineon<sp/>Technologies<sp/>AG](https://www.infineon.com)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Infineon<sp/>GitHub](https://github.com/Infineon)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[ModusToolbox™](https://www.infineon.com/modustoolbox)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[api]:<sp/>modules.html</highlight></codeline>
+<codeline><highlight class="normal">[settings]:<sp/>md_bsp_settings.html</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">©<sp/>2026,<sp/>Infineon<sp/>Technologies<sp/>AG,<sp/>or<sp/>an<sp/>affiliate<sp/>of<sp/>Infineon<sp/>Technologies<sp/>AG.</highlight></codeline>
+    </programlisting>
+    <location file="output/bsps/TARGET_KIT_PSC3M8_CC1/README.md"/>
+  </compounddef>
+</doxygen>
